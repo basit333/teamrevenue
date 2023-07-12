@@ -93,7 +93,7 @@ body {
 .our__services--tab::after {
   content: "";
   width: 0;
-  height: 2px;
+  height: 3px;
   background: linear-gradient(9deg, #5A4EF5, #70D8FA);
   position: absolute;
   bottom: 0;
