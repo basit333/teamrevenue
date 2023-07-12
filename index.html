@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Component</title>
+    <!-- Font Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap" rel="stylesheet">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <section class="our__services">
+      <img src="./services-bg-dots.png" alt="" class="our__services-bg-dots-top">
+      <img src="./services-bg-dots.png" alt="" class="our__services-bg-dots-bottom">
+      <div class="our__services--wrapper">
+
+        <h1 class="our__services--title">Our Services</h1>
+        <div class="our__services--container">
+
+          <div class="our__services--tabs">
+            <div class="our__services--tab active" data-tab="tab1">SALES</div>
+            <div class="our__services--tab" data-tab="tab2">MARKETING</div>
+            <div class="our__services--tab" data-tab="tab3">CUSTOMER SUCCESS</div>
+            <div class="our__services--tab" data-tab="tab4">REVENUE OPERATIONS</div>
+          </div>
+
+          <div class="our__services--tab-content">
+            <div id="tab1" class="our__services--tab-list active">
+              <p class="our__services--tab-list-item">GTM Strategy</p>
+              <p class="our__services--tab-list-item">Sales Process</p>
+              <p class="our__services--tab-list-item">Digital Sales Acceleration</p>
+              <p class="our__services--tab-list-item">Outbound Sales</p>
+              <p class="our__services--tab-list-item">Fractional Leadership</p>
+              <p class="our__services--tab-list-item">Leadership Coaching</p>
+            </div>
+            <div id="tab2" class="our__services--tab-list">
+              <p class="our__services--tab-list-item">GTM Strategy</p>
+              <p class="our__services--tab-list-item">Inbound Lead Strategy</p>
+              <p class="our__services--tab-list-item">ABM</p>
+              <p class="our__services--tab-list-item">Fractional Leadership</p>
+              <p class="our__services--tab-list-item">Leadership Coaching</p>
+            </div>
+            <div id="tab3" class="our__services--tab-list">
+              <p class="our__services--tab-list-item">GTM Strategy</p>
+              <p class="our__services--tab-list-item">Process & Playbooks</p>
+              <p class="our__services--tab-list-item">Fractional Leadership</p>
+              <p class="our__services--tab-list-item">Leadership Coaching</p>
+            </div>
+            <div id="tab4" class="our__services--tab-list">
+              <p class="our__services--tab-list-item">Organizational Design</p>
+              <p class="our__services--tab-list-item">RevTech Optimization</p>
+              <p class="our__services--tab-list-item">Business Operating</p>
+              <p class="our__services--tab-list-item">System (BOS)</p>
+              <p class="our__services--tab-list-item">Forecasting Support</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+
+</html>
