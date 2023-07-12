@@ -11,7 +11,8 @@ body {
 }
 
 .our__services {
-  max-width: 1920px;
+  max-width: 100%;
+  width: 100%;
   background: url(/services-bg.png) no-repeat center/cover;
   position: relative;
   overflow: hidden;
@@ -38,7 +39,7 @@ body {
 .our__services--wrapper {
   max-width: 1460px;
   margin: 0 auto 35px auto;
-  padding: 50px 0;
+  padding: 50px 20px;
 }
 
 .our__services--title {
@@ -75,14 +76,14 @@ body {
   padding: 24px 25px;
   cursor: pointer;
   position: relative;
-  transition: all .5s linear;
+  transition: all .3s linear;
 }
 
 .our__services--tab.active {
   color: #000;
   margin-right: 0;
   border-color: transparent;
-  transition: all .5s linear;
+  transition: all .3s ease;
 }
 
 .our__services--tab.active.our__services--tab::after {
@@ -98,7 +99,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: width .5s linear;
+  transition: width .3s ease;
 }
 
 .our__services--tab:hover {
@@ -107,6 +108,7 @@ body {
 
 .our__services--tab:hover.our__services--tab::after {
   width: 100%;
+  transition: width .3s ease;
 }
 
 .our__services--tab-content {
@@ -119,7 +121,12 @@ body {
   display: block;
 }
 
-.our__services--tab-content::before {
+.our__services--tab-list {
+  display: none;
+  position: relative;
+}
+
+.our__services--tab-list::before {
   content: "";
   width: 3px;
   height: 100%;
@@ -130,17 +137,11 @@ body {
   z-index: 1;
   transform: scaleY(0);
   transform-origin: center;
-  animation: borderHeightAnimation .5s linear forwards;
-}
-
-.our__services--tab-list {
-  display: none;
-  opacity: 0;
+  animation: borderHeightAnimation .5s linear forwards .2s;
 }
 
 .our__services--tab-list.active {
   display: block;
-  opacity: 1;
 }
 
 .our__services--tab-list-item {
@@ -169,7 +170,7 @@ body {
   top: 0;
   transform: scaleX(0);
   transform-origin: left;
-  animation: borderWidthAnimation 1s linear forwards .5s;
+  animation: borderWidthAnimation 1s linear forwards .6s;
 }
 
 .our__services--tab-list-item:last-child:after {
@@ -182,7 +183,7 @@ body {
   bottom: 0;
   transform: scaleX(0);
   transform-origin: left;
-  animation: borderWidthAnimation 1s linear forwards .5s;
+  animation: borderWidthAnimation 1s linear forwards .6s;
 }
 
 @keyframes borderHeightAnimation {
@@ -202,5 +203,23 @@ body {
 
   100% {
     transform: scaleX(1);
+  }
+}
+
+@media (max-width: 1280px) {
+  .our__services--tab {
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .our__services--tab-list-item {
+    font-size: 24px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .our__services--container {
+    display: none;
   }
 }
