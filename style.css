@@ -112,6 +112,11 @@ body {
 .our__services--tab-content {
   width: 50%;
   position: relative;
+  display: none;
+}
+
+.our__services--tab-content.active {
+  display: block;
 }
 
 .our__services--tab-content::before {
