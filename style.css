@@ -152,8 +152,10 @@ body {
   line-height: 40px;
   padding: 14px 34px;
   position: relative;
+  opacity: 0;
   cursor: pointer;
   transition: all .5s ease-in;
+  animation: opacityAnimation .5s ease-in forwards .6s;
 }
 
 .our__services--tab-list-item:hover {
@@ -203,6 +205,16 @@ body {
 
   100% {
     transform: scaleX(1);
+  }
+}
+
+@keyframes opacityAnimation {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
