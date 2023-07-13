@@ -40,3 +40,35 @@ tabsBtn.forEach((tab) => {
     tabContentContainer.classList.add("active");
   });
 });
+
+//
+
+// Get all the accordion buttons
+const accordionBtns = document.querySelectorAll(".our__services--accordion-btn");
+
+// Loop through each accordion button and add a click event listener
+accordionBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Remove active class from all accordion buttons
+    accordionBtns.forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
+    // Add active class to the clicked accordion button
+    btn.classList.add("active");
+
+    // Get the corresponding accordion content
+    const accordionContent = btn.nextElementSibling;
+
+    // Get all the accordion contents
+    const allAccordionContents = document.querySelectorAll(".our__services--accordion-content");
+
+    // Remove active class from all accordion contents
+    allAccordionContents.forEach((content) => {
+      content.classList.remove("active");
+    });
+
+    // Add active class to the corresponding accordion content
+    accordionContent.classList.add("active");
+  });
+});

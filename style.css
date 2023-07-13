@@ -218,6 +218,10 @@ body {
   }
 }
 
+.our__services--accordion-container {
+  display: none;
+}
+
 @media (max-width: 1280px) {
   .our__services--tab {
     font-size: 30px;
@@ -233,5 +237,109 @@ body {
 @media (max-width: 1024px) {
   .our__services--container {
     display: none;
+  }
+
+  .our__services--accordion-container {
+    display: block;
+    max-width: 500px;
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .our__services--accordion-btn {
+    color: #000;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    transition: all .3s ease-in;
+    padding-bottom: 10px;
+  }
+
+  .our__services--accordion-btn.active {
+    margin-bottom: 0;
+  }
+
+  .our__services--accordion-btn.active.our__services--accordion-btn::after {
+    width: 0;
+  }
+
+  .our__services--accordion-btn::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(9deg, #5A4EF5, #70D8FA);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width .3s ease-in;
+  }
+
+  .our__services--accordion-content {
+    position: relative;
+    margin-bottom: 20px;
+    display: none;
+  }
+
+  .our__services--accordion-content.active {
+    display: block;
+  }
+
+  .our__services--accordion-content::before {
+    content: "";
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(9deg, #5A4EF5, #70D8FA);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transform: scaleY(0);
+    transform-origin: center;
+    animation: borderHeightAnimation .5s ease-in forwards .2s;
+  }
+
+  .our__services--accordion-content::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(9deg, #5A4EF5, #70D8FA);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: borderWidthAnimation 1s ease-in forwards .6s;
+  }
+
+  .our__services--accordion-list-item {
+    color: #000;
+    font-family: Outfit;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    padding: 15px 20px;
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+    transition: all .5s ease-in;
+    animation: opacityAnimation .5s ease-in forwards .2s;
+  }
+
+  .our__services--accordion-list-item::before {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(9deg, #5A4EF5, #70D8FA);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: borderWidthAnimation 1s ease-in forwards .6s;
   }
 }
