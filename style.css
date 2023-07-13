@@ -76,14 +76,14 @@ body {
   padding: 24px 25px;
   cursor: pointer;
   position: relative;
-  transition: all .3s linear;
+  transition: all .3s ease-in;
 }
 
 .our__services--tab.active {
   color: #000;
   margin-right: 0;
   border-color: transparent;
-  transition: all .3s ease;
+  transition: all .3s ease-in;
 }
 
 .our__services--tab.active.our__services--tab::after {
@@ -99,7 +99,7 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  transition: width .3s ease;
+  transition: width .3s ease-in;
 }
 
 .our__services--tab:hover {
@@ -108,11 +108,11 @@ body {
 
 .our__services--tab:hover.our__services--tab::after {
   width: 100%;
-  transition: width .3s ease;
+  transition: width .3s ease-in;
 }
 
 .our__services--tab-content {
-  width: 50%;
+  width: 35%;
   position: relative;
   display: none;
 }
@@ -137,7 +137,7 @@ body {
   z-index: 1;
   transform: scaleY(0);
   transform-origin: center;
-  animation: borderHeightAnimation .5s linear forwards .2s;
+  animation: borderHeightAnimation .5s ease-in forwards .2s;
 }
 
 .our__services--tab-list.active {
@@ -153,7 +153,7 @@ body {
   padding: 14px 34px;
   position: relative;
   cursor: pointer;
-  transition: all .5s linear;
+  transition: all .5s ease-in;
 }
 
 .our__services--tab-list-item:hover {
@@ -170,7 +170,7 @@ body {
   top: 0;
   transform: scaleX(0);
   transform-origin: left;
-  animation: borderWidthAnimation 1s linear forwards .6s;
+  animation: borderWidthAnimation 1s ease-in forwards .6s;
 }
 
 .our__services--tab-list-item:last-child:after {
@@ -183,7 +183,7 @@ body {
   bottom: 0;
   transform: scaleX(0);
   transform-origin: left;
-  animation: borderWidthAnimation 1s linear forwards .6s;
+  animation: borderWidthAnimation 1s ease-in forwards .6s;
 }
 
 @keyframes borderHeightAnimation {
